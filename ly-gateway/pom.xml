@@ -10,13 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.leyou.common</groupId>
-    <artifactId>ly-registry</artifactId>
+    <artifactId>ly-gateway</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
