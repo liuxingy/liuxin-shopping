@@ -7,10 +7,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:10086/eureka
-    registry-fetch-interval-seconds: 5
 zuul:
   prefix: /api # 添加路由前缀
-  retryable: true
 hystrix:
   command:
     default:
@@ -21,5 +19,5 @@ hystrix:
 ribbon:
   ConnectTimeout: 10000 # 连接超时时间(ms)
   ReadTimeout: 3500 # 通信超时时间(ms)
-  MaxAutoRetriesNextServer: 0# 同一服务不同实例的重试次数
   MaxAutoRetries: 0 # 同一实例的重试次数
+  MaxAutoRetriesNextServer: 0# 同一服务不同实例的重试次数
