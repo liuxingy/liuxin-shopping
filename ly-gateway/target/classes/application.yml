@@ -23,4 +23,3 @@ ribbon:
   ReadTimeout: 3500 # 通信超时时间(ms)
   MaxAutoRetries: 0 # 同一实例的重试次数
   MaxAutoRetriesNextServer: 0# 同一服务不同实例的重试次数
-
