@@ -3,10 +3,11 @@ server:
 spring:
   application:
     name: item-service
-    datasource:
-      url: jdbc:mysql://localhost:3306/leyou
-      username: root
-      password: root
+  datasource:
+    driver-class-name : com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/leyou
+    username: root
+    password: root
 eureka:
   client:
     service-url:
