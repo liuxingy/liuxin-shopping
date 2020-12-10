@@ -25,7 +25,13 @@ public class UserController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @HystrixCommand
+    @HystrixCommand(
+            commandProperties = {
+                    @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"),
+                    @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000"),
+                    @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60")
+            }
+    )
     @GetMapping("user")
    public String queryId(long id) {
         if (id % 2 == 0) {

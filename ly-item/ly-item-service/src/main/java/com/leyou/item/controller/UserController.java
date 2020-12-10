@@ -26,11 +26,6 @@ public class UserController {
         Map<String, Object> map = new HashMap<>();
         map.put("username", "张三");
         map.put("password", "123");
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return map;
    }
 }

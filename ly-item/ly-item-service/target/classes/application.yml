@@ -15,3 +15,5 @@ eureka:
   instance:
     prefer-ip-address: true
     ip-address: 127.0.0.1
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
