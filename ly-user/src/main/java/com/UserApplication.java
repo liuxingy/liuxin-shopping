@@ -1,7 +1,9 @@
-package com.leyou;
+package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -12,17 +14,17 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @author liuxy
  * @version 1.0
  * @description:
- * @date 2020/11/23 15:06
+ * @date 2020/12/7 15:45
  */
-@SpringBootApplication
-@MapperScan("com.leyou.item.mapper")
-@EnableDiscoveryClient
-public class LyItemApplication {
+@SpringCloudApplication
+@MapperScan("com.user.mapper")
+public class UserApplication {
     public static void main(String[] args) {
-        SpringApplication.run(LyItemApplication.class);
+        SpringApplication.run(UserApplication.class);
     }
 
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

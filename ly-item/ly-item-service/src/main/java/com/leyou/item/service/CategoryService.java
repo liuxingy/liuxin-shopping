@@ -28,7 +28,5 @@ public class CategoryService {
             throw new LyException(ExceptionEnums.CATEGORY_NOT_FOND);
         }
         return select;
-
-
     }
 }

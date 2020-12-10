@@ -16,12 +16,10 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("category")
+@RequestMapping("api/item/category")
 public class CategoryController {
-
     @Autowired
     private CategoryService categoryService;
-
     @GetMapping("list")
     public ResponseEntity<List<Category>> queryCategoryListById(@RequestParam("pid") long pid) {
         return ResponseEntity.ok(categoryService.queryCategoryListById(pid));
